@@ -16,8 +16,10 @@ const person = {
 // Accessing object properties
 x = person.name; // Dot notation // lấy ra giá trị của thuộc tính name
 x = person['age']; // Bracket notation // lấy ra giá trị của thuộc tính age
-x = person.address.state;// lấy ra giá trị của thuộc tính state
+x = person.address.state;// lấy ra giá trị của thuộc tính state 
+//kết quả : MA
 x = person.hobbies[0];// lấy ra giá trị của thuộc tính hobbies
+//kết quả : music
 
 
 // Updating properties
