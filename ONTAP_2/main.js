@@ -251,3 +251,47 @@ console.log(l);
 // Check if object has a property
 l = todo.hasOwnProperty('age');// hasOwnProperty : kiểm tra xem object có thuộc tính age hay không
 console.log(l);
+
+
+
+
+
+//// 2.07 destructuring-naming
+console.log("destructuring-naming");
+const firstName = 'John';
+const lastName = 'Doe';
+const age = 30;
+
+const person5 = {
+  firstName,
+  lastName,
+  age,
+};
+
+console.log(person5.age);
+
+
+// Destructuring object properties
+
+const todo1 = {
+  id: 1,
+  title: 'Take out trash',
+  user: {
+    name1: 'John',
+  },
+};
+
+const {
+  id: todoId, // rename id to todoId
+  title,
+  user: { name }, // destructuring multiple levels
+} = todo1;
+
+console.log(todoId);
+
+// Destructuring arrays & using the rest/spread operator
+const numbers = [23, 67, 33, 49, 52];
+
+const [first, second, ...rest] = numbers;// rest : lấy ra các phần tử còn lại của mảng
+
+console.log(first, second, rest);
