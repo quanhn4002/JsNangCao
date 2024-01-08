@@ -109,3 +109,145 @@ const c = "nguyen";
  x = Array.of(a, b, c);
 
 console.log(x);
+
+
+
+// Challenge 2
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [5, 6, 7, 8, 9, 10];
+
+// Solution 1
+const arr3 = arr1.slice(0, 4).concat(arr2);// nối mảng
+
+// Solution 2
+const arr4 = [...arr1, ...arr2];// nối mảng
+arr4.splice(4, 1);
+
+console.log(arr4);
+
+
+//2.05
+let p;
+
+// Creating an object
+const person = {
+  name: 'Quan Hai Nguyen',
+  age: 20,
+  isAdmin: true,
+  address: {
+    street: 'Tam dao',
+    city: 'VP',
+    state: 'MA',
+  },
+  hobbies: ['music', 'sports'],
+};
+
+// Accessing object properties
+p = person.name; // Dot notation // lấy ra giá trị của thuộc tính name
+p = person['age']; // Bracket notation // lấy ra giá trị của thuộc tính age
+p = person.address.state;// lấy ra giá trị của thuộc tính state 
+//kết quả : MA
+p = person.hobbies[0];// lấy ra giá trị của thuộc tính hobbies
+//kết quả : music
+
+
+// Updating properties
+person.name = 'Chung tieu ngao';// cập nhật lại giá trị của thuộc tính name
+person['isAdmin'] = false;// cập nhật lại giá trị của thuộc tính isAdmin
+console.log(p);
+// Deleting properties
+delete person.age;// xóa thuộc tính age
+console.log(p);
+// Create new properties
+person.hasChildren = true;
+
+// Add functions
+person.greet = function () {
+  console.log(`Hello, my name is ${this.name}`);
+};
+// this là một từ khóa đặc biệt trong JavaScript, nó tham chiếu đến đối tượng hiện tại, tức là đối tượng được sử dụng để gọi phương thức.
+
+person.greet();
+console.log(p);
+
+// Keys with multiple words
+const person2 = {
+  'first name': 'Brad',
+  'last name': 'Traversy',
+};
+
+p = person2['first name'];
+
+console.log(p);
+
+// 06-object-spread-methods
+console.log("06-object-spread-methods");
+
+
+
+let l;
+
+// Create object using the object constructor
+const todo = new Object();
+
+todo.id = 1;
+todo.name = 'Buy Milk';
+todo.completed = false;
+
+l = todo;
+console.log(l);
+
+// Object Nesting
+const person1 = {
+  address: {
+    coords: {
+      lat: 42.9384,
+      lng: -71.3232,
+    },
+  },
+};
+
+
+l = person1.address.coords.lat;
+console.log(l);
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+
+// Spread operator
+const obj3 = { ...obj1, ...obj2 };
+console.log(obj3);
+// Same as using ...
+const obj4 = Object.assign({}, obj1, obj2);// assign : gán
+console.log(obj4);
+
+// Array of objects
+const todos = [
+  { id: 1, name: 'Buy Milk' },
+  { id: 2, name: 'Pickup kids from school' },
+  { id: 3, name: 'Take out trash' },
+];
+
+l = todos[0].name;
+console.log(l);
+
+// Get array of object keys
+l = Object.keys(todo);// keys : lấy ra các key của object
+console.log(l);
+
+// Get length of an object
+l = Object.keys(todo).length;// lấy ra độ dài của object
+console.log(l);
+
+// Get array of object values
+l = Object.values(todo); // values : lấy ra các value của object
+console.log(l);
+
+// Get array of object key/value pairs
+l = Object.entries(todo);// entries : lấy ra các cặp key/value của object
+console.log(l);
+
+// Check if object has a property
+l = todo.hasOwnProperty('age');// hasOwnProperty : kiểm tra xem object có thuộc tính age hay không
+console.log(l);
