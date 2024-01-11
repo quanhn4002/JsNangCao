@@ -295,3 +295,4 @@ const numbers = [23, 67, 33, 49, 52];
 const [first, second, ...rest] = numbers;// rest : lấy ra các phần tử còn lại của mảng
 
 console.log(first, second, rest);
+
