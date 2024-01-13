@@ -43,3 +43,6 @@ const library = [
   const libraryJSON = JSON.stringify(library);// chuyển mảng library thành chuỗi JSON
   
   console.log(libraryJSON);
+
+ 
+ 
