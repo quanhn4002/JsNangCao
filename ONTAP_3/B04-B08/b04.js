@@ -12,11 +12,7 @@ function addDollarSign(value) {
   
   console.log(addPlusSign(200));
 
-  // Arrow Function
 
-
-  // function add(a, b) {
-//   return a + b;
 // }
 
 const add = (a, b) => {
