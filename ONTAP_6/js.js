@@ -42,3 +42,11 @@ remove.remove();
 
 // thêm class
 // on dom load
+// tạo thẻ
+const divElement = document.createElement('div');
+// tạo nd
+divElement.innerHTML = '<h3>Đây là nội dung MỚI ĐƯỢC THÊM VÀO 3 </h3>';
+
+// thêm class
+const parent = document.getElementById('parent');
+parent.appendChild(divElement);
